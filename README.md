@@ -30,33 +30,28 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
+![Screenshot](./assets/images/screenshot2.png)
+![Screenshot](./assets/images/screenshot1.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/Khemmie-Ray/Newsletter-signup-with-success-modal.git](https://github.com/Khemmie-Ray/Newsletter-signup-with-success-modal.git)
+- Live Site URL: [https://newsletter-signup-with-success-modal.netlify.app/](https://newsletter-signup-with-success-modal.netlify.app/)
 
 ## My process
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Sass](https://sass-lang.com/guide/) - This helped me better understand the reusability features in preprocessors. I really liked this and will use it going forward.
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [Khemmie-Ray](https://www.frontendmentor.io/profile/khemmie-ray)
+- Twitter - [@haramide](https://www.twitter.com/haramide)
