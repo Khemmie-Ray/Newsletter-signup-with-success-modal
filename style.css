@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+.modalcard button, .container .content form button, .container .content form input {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1.2em;
+  border-radius: 5px;
+}
+
+.modalcard button, .container .content form button {
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border: 0;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  background-color: hsl(235, 18%, 26%);
+  min-height: 100vh;
+  color: hsl(234, 29%, 20%);
+}
+body main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.6em;
+  border-radius: 50px;
+  width: 60%;
+}
+.container .content {
+  width: 50%;
+  padding-left: 2em;
+  font-size: 16px;
+}
+.container .content h1 {
+  font-size: 3rem;
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+  margin-bottom: 0;
+}
+.container .content .check p {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container .content .check p img {
+  margin-right: 0.5em;
+}
+.container .content form {
+  margin-top: 2em;
+}
+.container .content form .label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+}
+.container .content form .label p {
+  margin-bottom: 0.5em;
+}
+.container .content form .label p:last-child {
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+.container .content form input {
+  border: 1px solid hsl(231, 7%, 60%);
+}
+.container .content form button {
+  font-family: "Roboto";
+  font-weight: 700;
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+.container .content form button:hover, .container .content form button:focus {
+  background-color: hsl(4, 100%, 67%);
+  box-shadow: 0px 8px 12px hsl(4, 100%, 67%);
+}
+.container .hero-img {
+  width: 45%;
+  background-color: hsl(4, 100%, 67%);
+}
+.container .hero-img .desktop-bg {
+  width: 100%;
+}
+.container .hero-img .mobile-bg {
+  width: 0%;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+.modalcard {
+  background-color: hsl(0, 0%, 100%);
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2em;
+}
+.modalcard h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0;
+  }
+  .container .content {
+    width: 100%;
+    padding: 2em;
+    order: 2;
+  }
+  .container .content h1 {
+    font-size: 2rem;
+  }
+  .container .hero-img {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .container .hero-img .desktop-bg {
+    width: 0%;
+  }
+  .container .hero-img .mobile-bg {
+    width: 100%;
+    order: 1;
+  }
+  .modalcard {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .modalcard img {
+    margin-top: auto;
+  }
+  .modalcard button {
+    margin-top: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

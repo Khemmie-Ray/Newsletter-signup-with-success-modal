@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+// =====color variables ====
+
+$primary: hsl(4, 100%, 67%);
+$dark-slate-grey: hsl(234, 29%, 20%);
+$charcoal-grey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+$fontsize: 16px;
+
+
+// ====== Font variable ====
+
+@mixin font-face($font-family, $font-weight, $font-path) {
+      font-family: '#{$font-family}';
+      font-weight: $font-weight;
+      src: url('#{$font-path}') format('truetype');
+}
+
+// ====== Layout variable =====
+
+  @mixin layout($display, $alignitems, $justifycontent) {
+    display: $display;
+    align-items: $alignitems;
+    justify-content: $justifycontent;
+  }
+
+  %input-style {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1.2em;
+    border-radius: 5px;
+  }
+
+  %button-style {
+    background-color: $dark-slate-grey;
+    color: $white;
+    border: 0;
+  }
+
+body {
+    @include font-face('Roboto', 400, './assets/fonts/Roboto-Regular.ttf');
+    @include layout(flex, center, center);
+    padding: 0;
+    margin: 0; 
+    font-size: $fontsize;
+    background-color: $charcoal-grey;
+    min-height: 100vh;
+    color: $dark-slate-grey;
+
+    main {
+    @include layout(flex, center, center);
+    flex-direction: column; 
+    }
+}
+
+.container {
+    @include layout(flex, center, space-between);
+    background-color: $white;
+    padding: 1.6em;
+    border-radius: 50px;
+    width: 60%;
+
+    .content {
+      width: 50%;
+      padding-left: 2em;
+      font-size: $fontsize;
+
+      h1 {
+        font-size: 3rem;
+        @include font-face('Roboto', 700, './assets/fonts/Roboto-Bold.ttf');
+        margin-bottom: 0;
+      }
+
+      .check p {
+        @include layout(flex, center, flex-start);
+        
+        img {
+          margin-right: .5em;
+        }
+      }
+
+      form {
+        margin-top: 2em;
+
+        .label {
+          @include layout(flex, center, space-between);
+          @include font-face('Roboto', 700, './assets/fonts/Roboto-Bold.ttf');
+
+          p {
+            margin-bottom: .5em;
+          }
+
+          p:last-child {
+            color: $primary;
+            display: none;
+          }
+        }
+
+        input {
+          @extend %input-style;
+          border: 1px solid $grey;
+        }
+
+        button {
+          @extend %input-style;
+          @include font-face('Roboto', 700, './assets/fonts/Roboto-Regular.ttf');
+          @extend %button-style;
+        }
+
+        button:hover,  button:focus {
+          background-color: $primary;
+          box-shadow: 0px 8px 12px $primary;
+        }
+      }
+    }
+
+    .hero-img {
+      width: 45%;
+      background-color: $primary;
+
+      .desktop-bg {
+        width: 100%;
+      }
+
+      .mobile-bg {
+        width: 0%;
+      }
+    }    
+}
+
+footer {
+  margin-top: 1em;
+}
+
+.modalcard {
+  background-color: $white;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 2em;
+
+  button {
+    @extend %input-style;
+    @extend %button-style;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 0;
+
+    .content {
+      width: 100%;
+      padding: 2em;
+      order: 2;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+  .hero-img {
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    .desktop-bg {
+      width: 0%;
+    }
+  
+    .mobile-bg {
+      width: 100%;
+      order: 1; 
+    }
+  }
+} 
+
+.modalcard {
+  width: 100%;
+  min-height: 100vh;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  img {
+    margin-top: auto;
+  }
+
+  button {
+    margin-top: auto;
+  }
+}
+}
